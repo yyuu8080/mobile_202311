@@ -1548,6 +1548,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+  pageChangeThresholdPercent: 0.1
 --- !u!1 &1621565808
 GameObject:
   m_ObjectHideFlags: 0
