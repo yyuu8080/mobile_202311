@@ -13,10 +13,6 @@ public class ScrollBannerManager : MonoBehaviour
     private GameObject bannerPrefab;
     [SerializeField]
     private PageLightManager pageLightManager;
-    [SerializeField]
-    private GameObject pageLightGameObj;
-    [SerializeField]
-    private GameObject lightPrefab;
 
     private const string jsonPath = "Assets/Resources/banner.json";
     [Serializable]
@@ -52,14 +48,14 @@ public class ScrollBannerManager : MonoBehaviour
             openUrl.url = json.bannerDatas[i].url;
         }
         scrollBanner.ResetProperties();
-
-        pageLightManager.Generate();
         scrollBanner.OnPageChangeEvent += OnPageChange;
+
+        pageLightManager.Generate(json.count);
     }
 
     void OnPageChange(int pageIndex)
     {
-        pageLightManager.SetPage(pageIndex);
+        pageLightManager.ChangePage(pageIndex);
     }
 
     private JsonData LoadJson()

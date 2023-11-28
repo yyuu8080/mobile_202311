@@ -1,6 +1,18 @@
 {
-  "count": 3,
+  "count": 6,
   "bannerDatas": [
+    {
+      "url": "https://www.bing.com/?cc=jp",
+      "dataPath": "Images/BANNER1"
+    },
+    {
+      "url": "https://www.yahoo.co.jp/",
+      "dataPath": "Images/BANNER2"
+    },
+    {
+      "url": "https://www.google.co.jp/",
+      "dataPath": "Images/BANNER3"
+    },
     {
       "url": "https://www.bing.com/?cc=jp",
       "dataPath": "Images/BANNER1"
