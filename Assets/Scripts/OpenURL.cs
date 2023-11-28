@@ -10,10 +10,10 @@ using UnityEngine.UI;
 /// </summary>
 public class OpenURL : MonoBehaviour
 {
+    [NonSerialized]
+    public string url = "https://www.google.co.jp/";
     [SerializeField]
-    string url = "https://www.google.co.jp/";
-    [SerializeField]
-    Button button;
+    private Button button;
 
     void Start()
     {
