@@ -1,0 +1,17 @@
+{
+    "count" : 3,
+    "bannerDatas" : [
+        {
+            "url" : "https://www.google.co.jp/",
+            "dataPath" : "Images/BANNER1"
+        },
+        {
+            "url" : "https://www.google.co.jp/",
+            "dataPath" : "Images/BANNER2"
+        },
+        {
+            "url" : "https://www.google.co.jp/",
+            "dataPath" : "Images/BANNER3"
+        }
+    ]
+}

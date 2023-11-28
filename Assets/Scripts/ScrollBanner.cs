@@ -51,7 +51,6 @@ public class ScrollBanner : ScrollRect
 
     protected override void Start()
     {
-        maxPageIndex = content.childCount < 0 ? 0 : content.childCount - 1;
         ResetProperties();
     }
 
@@ -84,8 +83,14 @@ public class ScrollBanner : ScrollRect
         }
     }
 
-    private void ResetProperties()
+    public RectTransform GetContent()
     {
+        return content;
+    }
+
+    public void ResetProperties()
+    {
+        maxPageIndex = content.childCount < 0 ? 0 : content.childCount - 1;
         pageChangeThresholdPos = (1f / (float)(maxPageIndex + 1)) * pageChangeThresholdPercent;
     }
     protected override void OnValidate()
