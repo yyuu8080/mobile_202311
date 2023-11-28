@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BannerPageLightManager : MonoBehaviour
+public class ScrollBannerManager : MonoBehaviour
 {
     [SerializeField]
     private ScrollBanner scrollBanner;
     [SerializeField]
-    private PageLight pageLight;
+    private PageLightManager pageLightManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        pageLight.Generate();
+        pageLightManager.Generate();
         scrollBanner.OnPageChangeEvent += OnPageChange;
     }
 
     void OnPageChange(int pageIndex)
     {
-        pageLight.SetPage(pageIndex);
+        pageLightManager.SetPage(pageIndex);
     }
 }
