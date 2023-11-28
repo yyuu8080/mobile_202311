@@ -42,10 +42,14 @@ public class ScrollBannerManager : MonoBehaviour
         for(int i = 0; i < json.count; i++)
         {
             var banner = Instantiate(bannerPrefab, scrollBanner.GetContent().transform);
+            // Image設定
             var bannerImg = banner.GetComponent<Image>();
             Debug.Assert(bannerImg != null, "BannerプレハブのImageコンポーネントを取得できません");
             bannerImg.sprite = Resources.Load<Sprite>(json.bannerDatas[i].dataPath);
-            // TODO: バナーのURL設定
+            // URL設定
+            var openUrl = banner.GetComponent<OpenURL>();
+            Debug.Assert(openUrl != null, "BannerプレハブのOpenURLコンポーネントを取得できません");
+            openUrl.url = json.bannerDatas[i].url;
         }
         scrollBanner.ResetProperties();
 
