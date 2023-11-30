@@ -93,8 +93,10 @@ public class ScrollBanner : ScrollRect
         maxPageIndex = content.childCount < 0 ? 0 : content.childCount - 1;
         pageChangeThresholdPos = (1f / (float)(maxPageIndex + 1)) * pageChangeThresholdPercent;
     }
+#if UNITY_EDITOR
     protected override void OnValidate()
     {
         ResetProperties();
     }
+#endif
 }

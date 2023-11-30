@@ -61,15 +61,8 @@ public class ScrollBannerManager : MonoBehaviour
     private JsonData LoadJson()
     {
         JsonData json;
-        if (!File.Exists(jsonPath))
-        {
-            Debug.LogError("json not exists:" + jsonPath);
-            json = new JsonData();
-            return json;
-        }
-
-        var jsonTxt = File.ReadAllText(jsonPath);
-        json = JsonUtility.FromJson<JsonData>(jsonTxt);
+        var jsonTxt = Resources.Load<TextAsset>("banner");
+        json = JsonUtility.FromJson<JsonData>(jsonTxt.text);
         return json;
     }
 }
